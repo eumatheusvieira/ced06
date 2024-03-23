@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url("/images/back.png") no-repeat;
+  background-size: 100%;
+  background-color: #f8f8f8;
+}
+
+li,
+a {
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: #f8f8f8;
+}
+
+.logo {
+  height: 64px;
+  cursor: pointer;
+}
+
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  position: relative;
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 3px;
+  background: #00ea8b;
+  border-radius: 40px;
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+
+.nav_links li:hover::after {
+  transform: scaleX(1);
+}
+
+.home {
+  margin-top: 20px;
+  padding: 15px 9%;
+  padding-bottom: 15%;
+}
+
+.home .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 15px;
+}
+
+.home .box-container .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 15px 10px;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #00ea8b;
+  border: none;
+  padding: 10px 70px;
+  color: white;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.btn:active {
+  background-color: #00c576;
+}
+.map {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.fotos {
+  margin-top: -40px;
+  padding: 15px 9%;
+}
+
+.slider {
+  margin-top: -80px;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.images {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+}
+
+.slide {
+  opacity: 0;
+  transition: opacity .2s;
+  position: absolute;
+  width: 100%;
+  border-radius: 10px;
+}
+.on {
+  opacity: 1;
+}
+
+#prev-btn,
+#next-btn {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+}
+
+#prev-btn img,
+#next-btn img {
+  width: 100%;
+  height: 100%;
+}
+
+#prev-btn{
+  transform: rotate(180deg);
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CED 06</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="shortcut icon" type="imagex/png" href="./images/logo.ico">
+    <script src="scripts/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="images/logo.png" class="logo" />
+      <nav>
+        <ul class="nav_links">
+          <li><a href="#">INÍCIO</a></li>
+          <li><a href="#photos">FOTOS</a></li>
+          <li><a href="#">PROJETOS</a></li>
+          <li><a href="#">NOSSA HISTÓRIA</a></li>
+        </ul>
+    </header>
+    <div class="home">
+      <div class="box-container">
+        <div class="box">
+          <h1>
+            SEJA BEM VINDO(A) AO <br />
+            CENTRO EDUCACIONAL 06 DE CEILÂNDIA!
+          </h1>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est debitis
+            error amet minus corrupti dignissimos. Aliquid voluptas debitis
+            tempora. Vero ad incidunt ipsam distinctio necessitatibus excepturi
+            impedit ab voluptatum maxime! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Molestiae qui, a atque ipsum cumque ut ratione
+            doloremque eligendi laboriosam et inventore delectus aspernatur
+            molestias temporibus odit tempora aliquam? Quia, eveniet.
+          </p>
+          <button class="btn" onClick="location.href='#blog'">ENTRAR EM CONTATO</button>
+        </div>
+        <div class="box">
+          <h1>ONDE NOS ENCONTRAR</h1>
+          <p class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7676.326909113344!2d-48.11859145059762!3d-15.848004192031945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935bcd08abcfd347%3A0x3208d6cc598139b1!2sCED%2006%20de%20Ceil%C3%A2ndia!5e0!3m2!1spt-BR!2sbr!4v1711205507623!5m2!1spt-BR!2sbr"
+              width="350"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </p>
+          <button class="btn" onClick="parent.open('https://maps.app.goo.gl/sx33bLP3K7CcCUJw8')">VEJA COMO CHEGAR</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="fotos" id="photos">
+      <h1>FOTOS DO NOSSO AMADO CENTRÃO!</h1>
+
+      <div class="slider">
+        <button id="prev-btn"><img src="images/arrow.png"></button>
+        <div class="images">
+          <img src="images/1slide.png" alt="" class="slide on">
+          <img src="images/2slide.png" alt="" class="slide">
+        </div>
+        <button id="next-btn"><img src="images/arrow.png" alt=""></button>
+      </div>
+    </div>
+  </body>
+</html>
