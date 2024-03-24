@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CED 06</title>
+    <title>Centro Educacional 06</title>
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="shortcut icon" type="imagex/png" href="./images/logo.ico">
     <script src="scripts/script.js" defer></script>
   </head>
   <body>
     <header>
-      <img src="images/logo.png" class="logo" />
+      <a href="#"><img src="images/logo.png" class="logo"/></a>
       <nav>
         <ul class="nav_links">
           <li><a href="#">INÍCIO</a></li>
           <li><a href="#photos">FOTOS</a></li>
-          <li><a href="#">PROJETOS</a></li>
-          <li><a href="#">NOSSA HISTÓRIA</a></li>
+          <li><a href="#projects">PROJETOS</a></li>
+          <li><a href="#email">FALE CONOSCO</a></li>
         </ul>
     </header>
     <div class="home">
@@ -35,7 +35,7 @@
             doloremque eligendi laboriosam et inventore delectus aspernatur
             molestias temporibus odit tempora aliquam? Quia, eveniet.
           </p>
-          <button class="btn" onClick="location.href='#blog'">ENTRAR EM CONTATO</button>
+          <button class="btn" onClick="location.href='#email'">ENTRAR EM CONTATO</button>
         </div>
         <div class="box">
           <h1>ONDE NOS ENCONTRAR</h1>
@@ -56,16 +56,84 @@
     </div>
 
     <div class="fotos" id="photos">
-      <h1>FOTOS DO NOSSO AMADO CENTRÃO!</h1>
+      <div class="texto">
+        <h1>FOTOS DO NOSSO AMADO CENTRÃO!</h1>
+      </div>
+
 
       <div class="slider">
         <button id="prev-btn"><img src="images/arrow.png"></button>
         <div class="images">
-          <img src="images/1slide.png" alt="" class="slide on">
-          <img src="images/2slide.png" alt="" class="slide">
+          <img src="images/slide4.jpg" alt="" class="slide on">
+          <img src="images/slide3.jpg" alt="" class="slide">
+          <img src="images/slide2.jpg" alt="" class="slide">
+          <img src="images/slide1.jpg" alt="" class="slide">
         </div>
         <button id="next-btn"><img src="images/arrow.png" alt=""></button>
       </div>
+      <div class="btnblog">
+          <button class="btn" onClick="parent.open('https://ced6online.blogspot.com')">ACESSE NOSSO BLOG</button>
+      </div>
     </div>
+
+    <div class="projects" id="projects">
+      <div class="texto texto1">
+          <h1>NOSSOS PROJETOS</h1>
+      </div>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="images/odisseia.jpg" alt="" class="img1">
+          <h1>
+            ODISSEIA CULTURAL
+          </h1>
+          <button class="btn btnsm sm1">SAIBA MAIS</button>      
+          <div class="sm-container">
+            <div class="popup-box">
+              <h1>ODISSEIA CULTURAL</h1>
+              <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, tempora minima. Cumque quae hic vero magni odio ab est fugit officia, labore laudantium! Excepturi optio ipsum aspernatur magnam iusto. Laudantium?</p>
+              <button class="close btn btnclose saibamenos">FECHAR</button>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/interclasse.jpg" alt="" class="img1">
+          <h1>INTERCLASSE</h1>
+          <button class="btn btnsm sm2">SAIBA MAIS</button>
+          <div class="sm-container2">
+            <div class="popup-box">
+              <h1>INTERCLASSE</h1>
+              <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, tempora minima. Cumque quae hic vero magni odio ab est fugit officia, labore laudantium! Excepturi optio ipsum aspernatur magnam iusto. Laudantium?</p>
+              <button class="close btn btnclose saibamenos2">FECHAR</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="email" id="email">
+      <div class="texto">
+        <h1>FALE CONOSCO</h1>
+      </div>
+      <div class="container-form">
+        <form class="contact_form" action="#">
+          <input class="name" type="text" id="name" placeholder="Nome Completo" required>
+          <input class="emailinput" type="email" id="emailinput" placeholder="Email" required>
+          <input class="phone" type="text" id="phone" placeholder="Número de telefone" required>
+          <textarea class="message" id="nessage" rows="4" placeholder="Mensagem"></textarea>
+          <button type="submit" class="btn">ENVIAR</button>
+        </form>
+      </div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+      const form = document.querySelector('.contact_form'),
+        name = document.querySelector('.name'),
+        email = document.querySelector('.emailinput'),
+        phone = document.querySelector('.phone'),
+        msg = document.querySelector('.message');
+
+        
+    </script>
   </body>
 </html>
