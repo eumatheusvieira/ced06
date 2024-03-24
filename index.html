@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Centro Educacional 06</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="shortcut icon" type="imagex/png" href="./images/logo.ico">
     <script src="scripts/script.js" defer></script>
@@ -12,12 +12,21 @@
     <header>
       <a href="#"><img src="images/logo.png" class="logo"/></a>
       <nav>
+        <div class="mobile-menu">
+          <button onclick="showMenu()">
+            <img src="images/burger-menu-svgrepo-com (1).svg" alt="" class="icon">
+          </button>
+        </div>
         <ul class="nav_links">
-          <li><a href="#">INÍCIO</a></li>
-          <li><a href="#photos">FOTOS</a></li>
-          <li><a href="#projects">PROJETOS</a></li>
-          <li><a href="#email">FALE CONOSCO</a></li>
+          <li class="nav-item"><a href="#">INÍCIO</a></li>
+          <li class="nav-item"><a href="#photos">FOTOS</a></li>
+          <li class="nav-item"><a href="#projects">PROJETOS</a></li>
+          <li class="nav-item"><a href="#email">FALE CONOSCO</a></li>
         </ul>
+      </nav>
+
+
+      
     </header>
     <div class="home">
       <div class="box-container">
@@ -42,8 +51,8 @@
           <p class="map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7676.326909113344!2d-48.11859145059762!3d-15.848004192031945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935bcd08abcfd347%3A0x3208d6cc598139b1!2sCED%2006%20de%20Ceil%C3%A2ndia!5e0!3m2!1spt-BR!2sbr!4v1711205507623!5m2!1spt-BR!2sbr"
-              width="350"
-              height="300"
+              width="100%"
+              height="300vh"
               style="border: 0"
               allowfullscreen=""
               loading="lazy"
@@ -59,7 +68,6 @@
       <div class="texto">
         <h1>FOTOS DO NOSSO AMADO CENTRÃO!</h1>
       </div>
-
 
       <div class="slider">
         <button id="prev-btn"><img src="images/arrow.png"></button>

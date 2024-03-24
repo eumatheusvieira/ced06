@@ -55,3 +55,15 @@ hidePopup.onclick = () => {
   hidePopup2.onclick = () => {
     popupContainer2.classList.remove("active");
   };
+
+
+  function showMenu() {
+    const menuMobile = document.querySelector(".nav_links");
+    if(menuMobile.classList.contains('active')){
+      menuMobile.classList.remove('active')
+      document.querySelector('.icon').src = "images/burger-menu-svgrepo-com (1).svg"
+    } else{
+      menuMobile.classList.add('active')
+      document.querySelector('.icon').src = "images/close-bold-svgrepo-com.svg"
+    }
+  }
