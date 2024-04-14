@@ -110,7 +110,10 @@ header {
 }
 
 .fotos {
-  margin-top: -40px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 4%;
   padding: 15px 9%;
 }
 .texto {
@@ -129,11 +132,14 @@ header {
 }
 
 .images {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 700px;
+}
+
+.images img {
+  width: 50%;
 }
 
 .slide {
