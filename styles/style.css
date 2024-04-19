@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+
 * {
+  text-align: center;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -59,7 +61,7 @@ header {
   transition: transform 0.2s;
 }
 
-.nav_links li:hover::after {
+nav .nav_links li:hover::after {
   transform: scaleX(1);
 }
 
@@ -86,6 +88,10 @@ header {
   padding: 15px 10px;
 }
 
+.box .btn {
+  margin-top: 14px;
+}
+
 .text {
   font-size: 16px;
   font-weight: normal;
@@ -100,83 +106,64 @@ header {
   border-radius: 6px;
   transition: 0.3s;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.14);
+  margin-bottom: 10px;
 }
+
 .btn:active {
   background-color: #00c576;
 }
+
 .map {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .fotos {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
   background: white;
   border-radius: 6px;
+  margin: 0 10%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 0 4%;
   padding: 15px 9%;
 }
+
 .texto {
-  display: flex;
-  justify-content: center;
+  margin-bottom: 12px;
 }
 
-.slider {
-  margin-top: -80px;
-  display: flex;
-  width: 100%;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.images {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 700px;
-}
-
-.images img {
-  width: 50%;
-}
-
-.slide {
-  opacity: 0;
-  transition: opacity 0.3s;
-  position: absolute;
-  width: 100%;
-  border-radius: 10px;
-}
-.on {
-  opacity: 1;
-}
-
-#prev-btn,
-#next-btn {
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-  border: none;
-  background-color: transparent;
-}
-
-#prev-btn img,
-#next-btn img {
+.swiper {
   width: 100%;
   height: 100%;
 }
 
-#prev-btn {
-  transform: rotate(180deg);
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btnblog {
-  margin-top: -70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-top: 4vh;
 }
 
 .projects {
@@ -275,6 +262,7 @@ header {
   align-items: center;
   justify-content: center;
 }
+
 form {
   background: white;
   display: flex;
@@ -311,7 +299,74 @@ form button {
   cursor: pointer;
 }
 
+.footer {
+  border-top: solid 1px black;
+  margin-top: 40px;
+  height: 30vh;
+  margin: 0;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  background-color: rgb(228, 228, 228);
+}
+
+.end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-color: black;
+  width: 100%;
+  height: 20%;
+}
+
+.sociais {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.linksnav {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  justify-content: center;
+  list-style: none;
+}
+
+.linksnav li:hover {
+  opacity: 0.5;
+}
+
+.sociais {
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.sociais a:hover {
+  opacity: 0.5;
+}
+
 @media (max-width: 730px) {
+  .footer {
+    height: 35vh;
+  }
+
+  .linksnav {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .sociais {
+    margin-top: 20px;
+  }
+
   .nav_links {
     pointer-events: none;
     display: flex;
@@ -331,15 +386,24 @@ form button {
   }
 
   .nav_links li {
-    margin-left: 0;
+    margin: 0;
   }
 
   .mobile-menu {
     display: block;
   }
 
-  .nav_links.active{
+  .nav_links.active {
     pointer-events: all;
     opacity: 1;
+  }
+
+  .swiper-slide img {
+    height: 85%;
+  }
+
+  .fotos {
+    height: 65vh;
+    margin: 0 4%;
   }
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="shortcut icon" type="imagex/png" href="./images/logo.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="scripts/script.js" defer></script>
   </head>
   <body>
@@ -59,23 +60,19 @@
     </div>
 
     <div class="fotos" id="photos">
-      <div class="texto">
-        <h1>FOTOS DO NOSSO AMADO CENTRÃO!</h1>
-      </div>
-
-      <div class="slider">
-        <button id="prev-btn"><img src="images/arrow.png"></button>
-        <div class="images">
-          <img src="images/slide4.jpg" alt="" class="slide on">
-          <img src="images/slide3.jpg" alt="" class="slide">
-          <img src="images/slide2.jpg" alt="" class="slide">
-          <img src="images/slide1.jpg" alt="" class="slide">
+      <div class="texto">FOTOS DO NOSSO AMADO CENTRÃO</div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/slide1.jpg"></div>
+          <div class="swiper-slide"><img src="images/slide2.jpg"></div>
+          <div class="swiper-slide"><img src="images/slide3.jpg"></div>
+          <div class="swiper-slide"><img src="images/slide4.jpg"></div>
         </div>
-        <button id="next-btn"><img src="images/arrow.png" alt=""></button>
+        <div class="swiper-pagination"></div>
       </div>
       <div class="btnblog">
-          <button class="btn" onClick="parent.open('https://ced6online.blogspot.com')">ACESSE NOSSO BLOG</button>
-      </div>
+        <button class="btn" onClick="parent.open('https://ced6online.blogspot.com')">ACESSE NOSSO BLOG</button>
+    </div>
     </div>
 
     <div class="projects" id="projects">
@@ -126,16 +123,30 @@
         </form>
       </div>
     </div>
+
+
+    <footer class="footer">
+      <div class="not"></div>
+      <div class="space">
+        <div class="sociais">
+          <a href="https://www.instagram.com/ced06_on_line/" target="_blank"><img src="svgs/instagram.svg"></a>
+          <a href="https://ced6online.blogspot.com" target="_blank"><img src="svgs/blog.svg"></a>
+          <a href="https://www.youtube.com/@ced6online/videos" target="_blank"><img src="svgs/youtube.svg"></a>
+        </div>
+        <div class="links">
+          <ul class="linksnav">
+            <li><a href="#">INÍCIO</a></li>
+            <li><a href="#photos">FOTOS</a></li>
+            <li><a href="#projects">PROJETOS</a></li>
+            <li><a href="#email">FALE CONOSCO</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="end">
+        <h1>Created by @eumatheusvieira</h1>
+      </div>
+    </footer>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-
-    <script>
-      const form = document.querySelector('.contact_form'),
-        name = document.querySelector('.name'),
-        email = document.querySelector('.emailinput'),
-        phone = document.querySelector('.phone'),
-        msg = document.querySelector('.message');
-
-        
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>
